@@ -1,13 +1,11 @@
 function myFunction() {
   var xml = HtmlService.createHtmlOutputFromFile('test');
-  var parser = new DOMParser();
-  var persed = parser.parseFromString(xml, 'text/xml')
+  var persed = XmlService.parse(xml);
 }
 
 function test2func(){
   var html = HtmlService.createHtmlOutputFromFile('test2');
-  var parser = new DOMParser();
-  var persed = parser.parseFromString(xml, 'text/html');
+  var persed = XmlService.parse(html);
   
   Logger.log(parsed);
 }
